@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- JS -->
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        
+        <title>BigProject - 663738906</title>
+    </head>
+    
+    <body>
+        <!-- Navbar -->
+        <header class="mdc-top-app-bar">
+          <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+              <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+              <span class="mdc-top-app-bar__title">Matt Alvero - COVID-19 State Data</span>
+            </section>
+          </div>
+        </header>
+        
+        <!-- Side drawer -->
+        <aside class="mdc-drawer mdc-drawer--modal">
+            <div class="mdc-drawer__content">
+              <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="" aria-current="page">
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">search</i>
+                  <span class="mdc-list-item__text">Search</span>
+                </a>
+                <a class="mdc-list-item" href="">
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">list</i>
+                  <span class="mdc-list-item__text">List</span>
+                </a>
+                <a class="mdc-list-item" href="">
+                  <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bar_chart</i>
+                  <span class="mdc-list-item__text">Chart</span>
+                </a>
+              </nav>
+            </div>
+          </aside>
+        <div class="mdc-drawer-scrim" href="#"></div>
+        <!-- Screens stored in main -->
+        <main class="mdc-top-app-bar--fixed-adjust main-content">
+            <div id="search">
+                <h1>Search states</h1>
+                <p>Part 1: Add states that you want the data for.</p>
+                <input list="states" id="input_states">
+                <datalist id="states"></datalist>
+                <input type="submit" value="Add" id="add_states">
+                <div>
+                    <p id="states_selected">Selected states:</p>
+                </div>
+                <p>Part 2: Add the specific type of COVID-19 data you want.</p>
+                <input list="dtype" id="data_type">
+                <datalist id="dtype"></datalist>
+                <input type="submit" value="Add" id="add_dtype">
+                <div>
+                    <p id="dtype_selected">Data type selected:</p>
+                </div>
+                <button class="mdc-button mdc-button--raised">
+                  <div class="mdc-button__ripple"></div>
+                  <span class="mdc-button__label">Create Chart</span>
+                </button>
+            </div>
+            
+            <div id="list">
+                <h1>List of state data you selected</h1>
+            </div>
+            
+            <div id="graph">
+                <h1>Graph of data you selected</h1>
+            </div>
+        </main>
+        
+        <script src="js/script.js"></script>
+    </body>
+    
+</html>
