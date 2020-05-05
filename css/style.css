@@ -6,7 +6,18 @@ body {
 }
 #list {
     text-align: center;
+    display: block;
 }
 #graph {
     text-align: center;
+    display: none;
+}
+#dtable {
+    border: 1px solid #ddd;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+#dtable, th, td {
+    padding: 10px;
 }
